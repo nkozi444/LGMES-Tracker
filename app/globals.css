@@ -1,0 +1,83 @@
+@import url('https://fonts.googleapis.com/css2?family=Spectral:wght@500;600;700&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500;600&display=swap');
+
+:root {
+  /* Design tokens — government letterhead direction:
+     deep navy masthead, warm paper background, muted gold accent rule.
+     Serif (Spectral) for titles/report names, IBM Plex Sans for UI text,
+     IBM Plex Mono for dates/figures — a document-and-ledger pairing. */
+  --ink: #0B2545;        /* masthead / darkest navy */
+  --navy: #1B4F91;       /* primary interactive: links, buttons */
+  --gold: #B98B2E;       /* accent rule, on-time emphasis */
+  --bg: #F7F5EF;         /* warm paper background */
+  --surface: #FFFFFF;
+  --surface-tint: #F1F4F8;
+  --border: #DAD5C7;
+  --border-strong: #C6C0AE;
+  --text-primary: #1C2430;
+  --text-secondary: #5B6472;
+
+  --status-ontime-bg: #E3EEE0;
+  --status-ontime-border: #4C7A3F;
+  --status-ontime-text: #2C4A24;
+  --status-late-bg: #F5EAD2;
+  --status-late-border: #B98B2E;
+  --status-late-text: #7A5A10;
+  --status-missing-bg: #F3E1DE;
+  --status-missing-border: #A23B33;
+  --status-missing-text: #6B211C;
+  --status-empty-bg: #F1EFE8;
+  --status-empty-border: #C6C0AE;
+  --status-empty-text: #6B695F;
+
+  --font-display: 'Spectral', Georgia, serif;
+  --font-sans: 'IBM Plex Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-mono: 'IBM Plex Mono', monospace;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text-primary);
+  font-family: var(--font-sans);
+  font-size: 15px;
+  line-height: 1.5;
+}
+
+h1, h2, h3 {
+  font-family: var(--font-display);
+  font-weight: 600;
+  margin: 0;
+}
+
+button {
+  font-family: inherit;
+  cursor: pointer;
+}
+
+button:focus-visible,
+a:focus-visible,
+input:focus-visible,
+select:focus-visible {
+  outline: 2px solid var(--navy);
+  outline-offset: 2px;
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+a {
+  color: var(--navy);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.001ms !important;
+    transition-duration: 0.001ms !important;
+  }
+}
